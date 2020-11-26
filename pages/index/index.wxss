@@ -19,3 +19,24 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.masonry {
+  column-count: 2;
+  column-gap: 1em;
+  margin: 0.2em auto;
+  max-width: 400px;
+}
+
+.item {
+  background-color: aliceblue;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+}

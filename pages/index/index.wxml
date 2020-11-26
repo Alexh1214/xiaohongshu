@@ -1,4 +1,27 @@
 <!--index.wxml-->
 <view class="container">
-
+  <view class="masonry">
+    <view class="item">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
+    </view>
+    <view class="item">
+          <image mode="aspectFill" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpMdbrZMAWuwJ.jpg" style="width:100%; height:auto; object-fit: cover"></image>
+    </view>
+    <view class="item">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpVIgV1LibHio.jfif"></image>
+    </view>
+    <view class="item">
+      <view class="image">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpNJYI4LTgifo.jfif"></image>
+      </view>
+    </view>
+    <view class="item">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khwcAG4U6VD65h1.jfif"></image>
+    </view>
+    <view class="item">
+      <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpRZsTzLFQ5MB.jfif"></image>
+    </view>
+  </view>
 </view>
+
+
