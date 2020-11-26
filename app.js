@@ -9,7 +9,7 @@ App({
     // 登录
     wx.login({
       success: res => {
-        
+        console.log();
       }
     })
     // 获取用户信息
