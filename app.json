@@ -1,7 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/post/post",
+    "pages/upload/upload",
+    "pages/profile/profile"
+
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -10,5 +13,19 @@
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Home",
+      "iconPath": "/images/index.png",
+      "selectedIconPath": "/images/index.png"
+    }, {
+      "pagePath": "pages/profile/profile",
+      "text": "Profile",
+      "iconPath": "/images/profile.png",
+      "selectedIconPath": "/images/profile.png"
+    }]
+  }
 }
