@@ -1,59 +1,43 @@
 <!--index.wxml-->
-      <view class="masonry">
-     
-          <view >
-          <image mode="widthFix" class="img-1" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
-          <h2>Red Car</h2>
-          
-            <view style="display: flex">
-          <image  class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
-          <text>Candy</text>
-
-      </view>
-
-</view>
-
-<view >
-          <view>
-          <image  src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpMdbrZMAWuwJ.jpg"></image>
-          <h2>Blue Car</h2>
-          
-            <view style="display: flex">
-          <image class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
-          <text>Candy</text>>
-
-      </view>
+<view class="container">
+  <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}" style="height: 800rpx" class="masonry">
+    <view wx:for="{{post}}" id="{{it.id}}" wx:for-item="it" wx:key="id" wx:for-index="idx" class="card">
+      <view class="card-header">  
+      {{it.title}}
       </view>
     </view>
-
-
-    <view >
-          <image mode="widthFix" class="img-1" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
-          <h2>Red Car</h2>
-          
-            <view style="display: flex">
-          <image  class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
-          <text>Candy</text>
-
+  </scroll-view>
+  <view class="masonry">  
+    <view class="card">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif" style="width:100%;"></image>
+      <view class="card-header">
+         Description Title 
       </view>
-
-      <view >
-          <image mode="widthFix" class="img-1" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
-          <h2>Red Car</h2>
-          
-            <view style="display: flex">
-          <image  class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
-          <text>Candy</text>
-
+      <view class="card-sub">
+        <view class="card-sub-left">
+            <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgMKrrFqejeLVUM.png" class="avator" mode="aspectFill"></image>
+            User Name
+        </view>
       </view>
-
+    </view>
+    <view class="card">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpMdbrZMAWuwJ.jpg" style="width:100%; "></image>
+    </view>
+    <view class="card">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpVIgV1LibHio.jfif" style="width:100%;"></image>
+    </view>
+    <view class="card">
+      <view class="image">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpNJYI4LTgifo.jfif" style="width:100%;"></image>
+      </view>
+    </view>
+    <view class="card">
+          <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khwcAG4U6VD65h1.jfif" style="width:100%;"></image>
+    </view>
+    <view class="card">
+      <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpRZsTzLFQ5MB.jfif" style="width:100%;"></image>
+    </view>
+  </view>
 </view>
-</view>
-
-
-
-</view>
-
-
 
 

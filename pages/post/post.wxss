@@ -1,0 +1,16 @@
+/* pages/post/post.wxss */
+.title{
+  text-align:center;
+}
+.avator {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius:50%;
+}
+.card-sub-left {
+	display: flex;
+	justify-content: space-evently;
+  align-items: center;
+  font-size: 9px;
+  margin-top: 15px;
+}

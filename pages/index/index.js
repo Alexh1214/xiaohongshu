@@ -4,16 +4,18 @@ const app = getApp()
 
 Page({
   data: {
-    
+    post: [],
   },
  
   onLoad: function () {
-    
-  },
-  submitInfo(e) {
-    this.setData({
-        formId: e.detail.formId,
-      },
-      (res) => {})
+    const Post = new wx.BaaS.TableObject("post");
+    Post.find().then((res) => {
+      console.log("results from ifanr", res);
+      this.setData({
+        post: res.data.object
+      });  
+    }, (err) => {
+      console.log("This is error", err);
+    }); 
   },
 })

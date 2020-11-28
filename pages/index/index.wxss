@@ -21,10 +21,65 @@
 	border-Radius: 15px;
 }
 
-.card{
-	background-color: #eee;
+.usermotto {
+  margin-top: 200px;
+}
+
+.masonry {
+  column-count: 2;
+  column-gap: 1em;
+  margin: 0.2em auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card {
+  background-color: aliceblue;
   display: inline-block;
   margin: 0 0 1em;
   width: 100%;
-   break-inside: avoid;
+  padding: 0;
+}
+
+.card-header {
+  margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: white
+}
+
+.card-sub {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    align-items: flex-end;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+    font-size: 10px;
+    background-color: white;
+}
+
+.card-sub-left {
+	display: flex;
+	justify-content: space-evently;
+  align-items: center;
+  font-size: 9px;
+}
+
+.avator {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius:50%;
+}
+
+.post .name {
+  font-size: 10px;
 }

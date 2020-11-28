@@ -60,14 +60,15 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/indexpost",
-          "pathName": "pages/index/post",
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/post/post",
+          "pathName": "pages/post/post",
+          "query": "",
           "scene": null
         }
       ]
