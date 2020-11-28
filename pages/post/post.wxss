@@ -6,7 +6,7 @@
   width: 60rpx;
   height: 60rpx;
   border-radius:50%;
-  padding-right: 8px;
+  margin-right: 10px;
 }
 .card-sub-left {
 	display: flex;

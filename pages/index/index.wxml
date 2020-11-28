@@ -9,8 +9,8 @@
       </view>
      <view class="card-sub">
       <view class="card-sub-left">
-        <image src="{{it.User.avatarPhoto.path}}" class="avatar"></image>
-        {{it.User.name}}
+        <image src="{{it.User.avatar}}" mode="aspectFit" class="avatar"></image>
+        {{it.User.nickname}}
       </view>
     </view>
     </view>

@@ -13,7 +13,7 @@ wx:if="{{currentUser}}" -->
     </view>
     
     <view class=".add-descrip">
-      <input class="input" name="input" bindinput="inputChange" bindconfirm="formReset" placeholder="Add description"/>
+      <input class="input" name="description" bindinput="descChange" bindconfirm="formReset" placeholder="Add description"/>
     </view>
 
     <button form-type="reset">Post</button>

@@ -6,8 +6,8 @@
 <view class="card-sub">
   <view class="card-sub-left">
     
-      <image class="avator" src= "{{post.User.avatarPhoto.path}}" ></image>
-   {{post.User.name}}
+      <image class="avator" src= "{{post.User.avatar}}" ></image>
+   {{post.User.nickname}}
 </view>
 </view>
 </view>
