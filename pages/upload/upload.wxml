@@ -1,2 +1,13 @@
 <!--pages/upload/upload.wxml-->
-<text>pages/upload/upload.wxml</text>
+<!-- <image src="{{item.image}}" mode="aspectFit" bindtap="previewImage"></image>
+wx:if="{{currentUser}}" -->
+
+
+<button type="primary" bindtap="getPhoto" wx:if="{{!it.photo}}">Choose Image</button>
+
+<form bindsubmit="createReview" bindreset="formReset">
+    <view class="add-movie">
+      <input class="input" name="input" bindinput="inputChange" bindconfirm="formReset" placeholder="Input your comment"/>
+    </view>
+    <button form-type="reset">Submit</button>
+  </form>

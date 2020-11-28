@@ -5,7 +5,8 @@ Page({
    * Page initial data
    */
   data: {
-
+    photos:[],
+    currentUser: null,
   },
 
   /**
@@ -14,53 +15,52 @@ Page({
   onLoad: function (options) {
 
   },
+  getPhoto: function (e) {
+    console.log("take a photo");
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album'],
+      success: (res) => {
+        console.log('getPhoto success', res);
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
+        const File = new wx.BaaS.File()
+        const fileParams = {filePath: res.tempFilePaths[0]};
+        const metadata = {categoryName: "cars"}
 
+        File.upload(fileParams, metadata).then((res)=>{
+          console.log('upload image res', res);
+          const Photo = new wx.BaaS.TableObject('post');
+
+          const photo = Photo.getWithoutData(this.data.post.id);
+
+          photo.set({
+            image: res.data.path,
+          })
+
+          photo.update().then((res) => {
+            console.log('photos save res', res);
+            this.setData({
+              photos:res.data,
+            })
+        }, err => {
+          console.log('photos update err', err)
+        })
+      }, err => {
+        console.log('upload err', err);
+      })
+    },
+
+    fail: (err) => {
+        console.log('getPhoto err', err);
+      },
+      complete: ()=>{}
+    }); 
   },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
+  previewImage: function () {
+    wx.previewImage({
+      current: this.data.image,
+      urls: [this.data.image]
+    })
   },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
 })
