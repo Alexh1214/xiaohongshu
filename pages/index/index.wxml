@@ -1,12 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-  <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}" style="height: 800rpx" class="masonry">
-    <view wx:for="{{post}}" id="{{it.id}}" wx:for-item="it" wx:key="id" wx:for-index="idx" class="card">
+  <!-- <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}" class="masonry"> -->
+   <view class="masonry"> 
+    <view bindtap="toPost" wx:for="{{post}}" id="{{it.id}}" wx:for-item="it" wx:key="id" wx:for-index="idx" class="card">
+      <image src= "{{it.photo}}" mode="aspectFill" style="width:100%;"></image>
       <view class="card-header">  
-      {{it.title}}
+        {{it.title}}
+      </view>
+     <view class="card-sub">
+      <view class="card-sub-left">
+        <image src="{{it.User.avatarPhoto.path}}" class="avatar"></image>
+        {{it.User.name}}
       </view>
     </view>
-  </scroll-view>
+    </view>
+  </view>
+  <!-- </scroll-view>
   <view class="masonry">  
     <view class="card">
           <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif" style="width:100%;"></image>
@@ -37,7 +46,7 @@
     <view class="card">
       <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpRZsTzLFQ5MB.jfif" style="width:100%;"></image>
     </view>
-  </view>
+  </view> -->
 </view>
 
 

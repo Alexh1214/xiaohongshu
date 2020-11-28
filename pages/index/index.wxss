@@ -66,13 +66,14 @@
 	display: flex;
 	justify-content: space-evently;
   align-items: center;
-  font-size: 9px;
+  font-size: 10px;
 }
 
-.avator {
+.avatar {
   width: 60rpx;
   height: 60rpx;
   border-radius:50%;
+  padding-right: 8px;
 }
 
 .post .name {
