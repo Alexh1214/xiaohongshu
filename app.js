@@ -2,9 +2,12 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    wx.BaaS = requirePlugin('sdkPlugin')
+    //让插件帮助完成登录、支付等功能
+    wx.BaaS.wxExtend(wx.login, wx.getUserInfo, wx.requestPayment)
+
+    let clientID = '434746c6447b757d455b'  // 应用名称: CandyLawagon' first MiniApp
+    wx.BaaS.init(clientID)
 
     // 登录
     wx.login({
