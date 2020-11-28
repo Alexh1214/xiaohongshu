@@ -29,6 +29,11 @@
       "iconPath": "/images/index.png",
       "selectedIconPath": "/images/index.png"
     }, {
+      "pagePath": "pages/upload/upload",
+      "text": "Upload",
+      "iconPath": "/images/upload.png",
+      "selectedIconPath": "/images/upload.png"
+    }, {
       "pagePath": "pages/profile/profile",
       "text": "Profile",
       "iconPath": "/images/profile.png",
