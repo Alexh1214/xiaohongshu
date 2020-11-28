@@ -14,12 +14,18 @@ Page({
             currentUser: user,
           });
           console.log('user',user);
+          wx.setStorage({
+            key:"user",
+            data: user
+          })
       }, err => {
         // might need to log the error message
         console.log("it's an error", err);
     })
+    
   },
   
+
   /**
    * Lifecycle function--Called when page load
    */
