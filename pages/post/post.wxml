@@ -1,13 +1,15 @@
 <!--pages/post/post.wxml-->
 <view class="title">POST</view>
-<image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
-<view class="card-sub-left">
-            <image src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgMKrrFqejeLVUM.png" class="avator" mode="aspectFill"></image>
-            User Name
-  </view>
-  <block wx:for = "{{posts}}" wx:for-item ="post" wx:key="id" >
-  <view class="item" bindtap="placeInfor" id="{{post.id}}">
-    <text>{{post.title}}</text>
-    <text>{{post.description}}</text>
-    </view>
-    </block>
+
+<image src="{{post.photo}}"></image>
+<view>
+<view class="card-sub">
+  <view class="card-sub-left">
+    
+      <image class="avator" src= "{{post.User.avatarPhoto.path}}" ></image>
+   {{post.User.name}}
+</view>
+</view>
+</view>
+  <view class="card-header">{{post.title}}</view>
+  <view class="card-des">{{post.description}}</view>

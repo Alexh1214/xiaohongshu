@@ -6,7 +6,11 @@ Page({
    */
   data: {
    post:{
-     
+     title:"",
+     description:""
+   },
+   User:{
+
    },
   },
 
@@ -14,55 +18,16 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+const post= new wx.BaaS.TableObject('post');
 
-  },
+console.log('detail page options',options);
+post.expand(['User']).get(options.id).then((res)  =>{
+  console.log("post page result",res);
+  this.setData({
+    post:res.data,
+  })
+})
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
+}
+  
 })

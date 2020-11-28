@@ -6,6 +6,7 @@
   width: 60rpx;
   height: 60rpx;
   border-radius:50%;
+  padding-right: 8px;
 }
 .card-sub-left {
 	display: flex;
@@ -14,3 +15,36 @@
   font-size: 9px;
   margin-top: 15px;
 }
+.card-sub {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  align-items: flex-end;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  align-items: center;
+  font-size: 10px;
+  background-color: white;
+}
+.card-header {
+  margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: white
+}
+.card-des {
+  margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+  font-size: 15px;
+  }
