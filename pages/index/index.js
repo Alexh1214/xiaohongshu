@@ -9,13 +9,19 @@ Page({
  
   onLoad: function () {
     const Post = new wx.BaaS.TableObject("post");
-    Post.find().then((res) => {
+    Post.expand(['User']).find().then((res) => {
       console.log("results from ifanr", res);
       this.setData({
-        post: res.data.object
+        post: res.data.objects
       });  
     }, (err) => {
       console.log("This is error", err);
-    }); 
+    });
   },
+
+  toPost: function(e) {
+    wx.navigateTo({
+      url: `/pages/post/post?id=${e.currentTarget.id}`,
+    });
+  }
 })
