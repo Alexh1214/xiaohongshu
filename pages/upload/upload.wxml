@@ -1,2 +1,20 @@
 <!--pages/upload/upload.wxml-->
-<text>pages/upload/upload.wxml</text>
+<!-- <image src="{{item.image}}" mode="aspectFit" bindtap="previewImage"></image>
+wx:if="{{currentUser}}" -->
+
+
+<button type="primary" bindtap="getPhoto" wx:if="{{!post.photo}}">Choose Image</button>
+<image wx:else src="{{post.photo}}" mode="aspectFit" bindtap="previewImage"></image>
+
+<form bindsubmit="createPost" bindreset="formReset">
+    
+  <view class="add-post">
+      <input class="input" name="input" bindinput="inputChange" bindconfirm="formReset" placeholder="Please give your post a title"/>
+    </view>
+    
+    <view class=".add-descrip">
+      <input class="input" name="input" bindinput="inputChange" bindconfirm="formReset" placeholder="Add description"/>
+    </view>
+
+    <button form-type="reset">Post</button>
+  </form>

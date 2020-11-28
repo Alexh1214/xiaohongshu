@@ -21,9 +21,9 @@ Page({
 
     postPage.get(options.id).then((res) => {
       console.log("post page result", res);
-      // this.setData({
-      //   post: res.data,
-      // });
+      this.setData({
+        post: res.data,
+      });
     })
     // let query = new wx.BaaS.Query();
 
