@@ -1,8 +1,32 @@
 <!--pages/profile/profile.wxml-->
-<view wx:if="{{currentUser}}">
-  <text>Welcome back {{currentUser.nickname}}!</text>
-</view>
+<view class="container">
 
-<view wx:else>
-  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler">微信 Login</button>
+
+  <view wx:if="{{currentUser}}">
+    <view class="profileBanner">
+      <image src="{{currentUser.avatar}}" mode="aspectFit" class="userinfo-avatar"></image>
+      <text class="userPage">{{currentUser.nickname}}</text>
+    </view>
+
+    <view class="masonry"> 
+    <view bindtap="toPost" wx:for="{{post}}" id="{{it.id}}" wx:for-item="it" wx:key="id" wx:for-index="idx" class="card">
+      <image src= "{{it.photo}}" mode="aspectFill" style="width:100%;"></image>
+      <view class="card-header">  
+        {{it.title}}
+      </view>
+     <view class="card-sub">
+      <view class="card-sub-left">
+        <image src="{{it.User.avatar}}" mode="aspectFit" class="avatar"></image>
+        {{it.User.nickname}}
+      </view>
+    </view>
+    </view>
+  </view>
+  </view>
+
+  <view wx:else>
+    <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler">微信 Login</button>
+  </view>
+
+  
 </view>
