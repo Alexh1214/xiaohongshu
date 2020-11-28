@@ -5,10 +5,10 @@ Page({
    * Page initial data
    */
   data: {
-    photos:[],
+    photo:"",
     currentUser: null,
     inputVal: "",
-    inputVal2:"",
+    inputDesc:"",
   },
 
   /**
@@ -28,27 +28,28 @@ Page({
 
         const File = new wx.BaaS.File()
         const fileParams = {filePath: res.tempFilePaths[0]};
-        const metadata = {categoryName: "photos"}
+        const metadata = {categoryName: "photo"}
 
         File.upload(fileParams, metadata).then((res)=>{
           console.log('upload image res', res);
-          const Photo = new wx.BaaS.TableObject('post');
+          this.setData ({"photo": res.data.path})
+          // const Post = new wx.BaaS.TableObject('post');
 
-          const photo = Photo.getWithoutData(this.data.photos.id);
+          // // const photo = Photo.getWithoutData(this.data.photo.id);
         
 
-          photo.set({
-            image: res.data.path,
-          })
+          // // photo.set({
+          // //   image: res.data.path,
+          // // })
 
-          photo.update().then((res) => {
-            console.log('photos save res', res);
-            this.setData({
-              photos:res.data,
-            })
-        }, err => {
-          console.log('photos update err', err)
-        })
+          // Post.update().then((res) => {
+          //   console.log('photos save res', res);
+          //   this.setData({
+          //     photos:res.data,
+          //   })
+      //   }, err => {
+      //     console.log('photo update err', err)
+      //   })
       }, err => {
         console.log('upload err', err);
       })
@@ -74,39 +75,33 @@ Page({
     });
   },
 
-  formReset: function () {
+  descChange: function (e) {
+    this.setData({
+      inputDesc: e.detail.value,
+    });
+  },
+
+  formReset: function (event) {
+    console.log(event)
     const val = this.data.inputVal;
+    const desc = this.data.inputDesc;
     if (val.trim() === "") return;
 
     const Posts = new wx.BaaS.TableObject("post");
 
     // step 1: create a blank record
-    const newPost = post.create();
+    const newPost = Posts.create();
 
     // step 2: set the information in the record
+  console.log (wx.getStorageSync("user"))
+  const user = wx.getStorageSync("user")
+
     newPost.set({
+      photo: [this.data.photo],
       title: val,
-      title: this.data.restaurants.id,
+      description: desc,
+      User: user.id
     });
-
-    // send the record to ifanr to save in the database
-    newReview.save().then(
-      (res) => {
-        console.log("newReview save", res);
-        const newItems = this.data.items;
-        newItems.push(res.data);
-        this.setData({
-          items: newItems,
-        });
-      },
-      (error) => {
-        console.log("newReview save error, error");
-      }
-    );
-
-    this.setData({
-      inputVal: "",
-    });
-
+    newPost.save()
   },
 })
