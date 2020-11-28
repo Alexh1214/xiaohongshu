@@ -1,4 +1,59 @@
 <!--index.wxml-->
-<view class="container">
+      <view class="masonry">
+     
+          <view >
+          <image mode="widthFix" class="img-1" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
+          <h2>Red Car</h2>
+          
+            <view style="display: flex">
+          <image  class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
+          <text>Candy</text>
+
+      </view>
 
 </view>
+
+<view >
+          <view>
+          <image  src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpMdbrZMAWuwJ.jpg"></image>
+          <h2>Blue Car</h2>
+          
+            <view style="display: flex">
+          <image class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
+          <text>Candy</text>>
+
+      </view>
+      </view>
+    </view>
+
+
+    <view >
+          <image mode="widthFix" class="img-1" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
+          <h2>Red Car</h2>
+          
+            <view style="display: flex">
+          <image  class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
+          <text>Candy</text>
+
+      </view>
+
+      <view >
+          <image mode="widthFix" class="img-1" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1khYpKAfi09640ug.jfif"></image>
+          <h2>Red Car</h2>
+          
+            <view style="display: flex">
+          <image  class="img" src="https://cloud-minapp-37964.cloud.ifanrusercontent.com/1kgNKlkh6lDgUvSa.jpg" width="100px"></image>
+          <text>Candy</text>
+
+      </view>
+
+</view>
+</view>
+
+
+
+</view>
+
+
+
+

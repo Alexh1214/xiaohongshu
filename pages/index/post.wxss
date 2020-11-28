@@ -1,0 +1,4 @@
+/* pages/index/post.wxss */
+.title{
+  text-align: center;
+}

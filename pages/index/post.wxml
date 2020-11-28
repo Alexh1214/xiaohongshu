@@ -1,0 +1,3 @@
+<!--pages/index/post.wxml-->
+<view class="title">POST</view>
+<image ></image>

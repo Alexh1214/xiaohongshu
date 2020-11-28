@@ -9,5 +9,11 @@ Page({
  
   onLoad: function () {
     
-  }
+  },
+  submitInfo(e) {
+    this.setData({
+        formId: e.detail.formId,
+      },
+      (res) => {})
+  },
 })

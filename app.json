@@ -1,7 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/post",
+    "pages/uplode/index",
+    "pages/profile/index"
+   
   ],
   "window":{
     "backgroundTextStyle":"light",
