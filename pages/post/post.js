@@ -5,13 +5,39 @@ Page({
    * Page initial data
    */
   data: {
-
+    post: {
+      title: "",
+      description: "",
+    }
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+   
+    const postPage = new wx.BaaS.TableObject("post");
+    console.log("postPage", options)
+
+    postPage.get(options.id).then((res) => {
+      console.log("post page result", res);
+      // this.setData({
+      //   post: res.data,
+      // });
+    })
+    // let query = new wx.BaaS.Query();
+
+    // query.compare("id", "=", options.id);
+
+    // // grab the information from movie_reviews table
+    // posPage.setQuery(query)
+    //   .find()
+    //   .then((res) => {
+    //     console.log("result from restaurant reviews query find", res);
+    //     this.setData({
+    //       post: res.data.objects,
+    //     });
+    //   });
 
   },
 

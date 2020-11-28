@@ -1,2 +1,7 @@
 <!--pages/post/post.wxml-->
 <text>pages/post/post.wxml</text>
+
+<view wx:for="{{post}}">
+<image src= "{{post.photo}}" mode="aspectFill" style="width:100%;"></image>
+
+</view>

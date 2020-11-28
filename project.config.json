@@ -62,6 +62,13 @@
         {
           "name": "pages/index/index",
           "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/post/post",
+          "pathName": "pages/post/post",
+          "query": "id = 5fbe771e33015411535032dd",
           "scene": null
         }
       ]
